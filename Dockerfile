@@ -25,6 +25,8 @@ RUN apt-get update && apt-get install -y \
 
 ENV TF_XLA_FLAGS --tf_xla_cpu_global_jit
 
+RUN pip3 install --upgrade pip
+
 RUN pip3 install -r ../requirements.txt  -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 
 CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "main:app"]
