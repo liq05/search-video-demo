@@ -15,13 +15,13 @@ def upload(filepath):
         return 1
         print(response.json)
     else:
-        print(123)
+        print("post media err!")
 
 
 def file_list(num=0):
     count = 0
     all_files = os.listdir(data_path)
-    gifs = [x for x in all_files if x.split(".")[-1] == "gif"]
+    gifs = [x for x in all_files if x.split(".")[-1] == "mp4"]
     for i in gifs:
         count += 1
         if count > num:
