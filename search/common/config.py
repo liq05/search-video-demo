@@ -7,7 +7,7 @@ MINIO_1ST_BUCKET = os.getenv("1ST_BUCKET", "alpha")
 MINIO_BUCKET_NUM= os.getenv("MINIO_OBJ_LIMIT", 20)
 
 UPLOAD_FOLDER = os.getenv("UPLOAD_FOLDER", "tmp/video")
-ALLOWED_EXTENSIONS = os.getenv("ALLOWED_EXTENSIONS", {"gif", "jpg", "jpeg", "png"})
+ALLOWED_EXTENSIONS = os.getenv("ALLOWED_EXTENSIONS", {"gif", "jpg", "jpeg", "png", "mp4"})
 
 LOCAL_CACHE_PATH = "./tmp"
 
