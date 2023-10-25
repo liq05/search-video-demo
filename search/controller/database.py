@@ -12,8 +12,12 @@ def batcher(iterable, n):
 def insert2redis(ids, dataList):
     # dataList [{"videoId": id, "feat": feat, "name": name}]
     r = redis.Redis(host=REDIS_ADDR, port=REDIS_PORT, db=REDIS_DB)
+    if ids is None or dataList is None:
+        print("ids is None or dataList is None")
+        return ""
     if len(ids) != len(dataList):
         # TODO return error
+        print("len(ids) != len(dataList)")
         return ""
     for k, v in enumerate(ids):
         r_key = v
