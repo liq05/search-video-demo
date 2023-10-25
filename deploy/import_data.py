@@ -21,7 +21,7 @@ def upload(filepath):
 def file_list(num=0):
     count = 0
     all_files = os.listdir(data_path)
-    gifs = [x for x in all_files if x.split(".")[-1] == "mp4"]
+    gifs = [x for x in all_files if x.split(".")[-1] == "gif"]
     for i in gifs:
         count += 1
         if count > num:
